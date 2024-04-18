@@ -25,16 +25,16 @@ public class CaptchaApplet extends Applet {
 
 	        verifyButton.addActionListener(new ActionListener() {
 	            @Override
-	            public void actionPerformed(ActionEvent e) {
-	                String userInput = captchaInput.getText();
-	                if (userInput.equalsIgnoreCase(captchaGenerator.getCaptchaText())) {
-	                    showStatus("CAPTCHA verified successfully!");
-	                } else {
-	                    showStatus("Incorrect CAPTCHA! Please try again.");
-	                }
-	            }
-	        });
-
+	            
+	            	 public void actionPerformed(ActionEvent e) {
+	            	        String userInput = captchaInput.getText();
+	            	        if (userInput.equals(captchaGenerator.getCaptchaText())) {
+	            	            showStatus("CAPTCHA verified successfully!");
+	            	        } else {
+	            	            showStatus("Incorrect CAPTCHA! Please try again.");
+	            	        }
+	            	    }
+	            	});
 	        refreshButton.addActionListener(new ActionListener() {
 	            @Override
 	            public void actionPerformed(ActionEvent e) {
